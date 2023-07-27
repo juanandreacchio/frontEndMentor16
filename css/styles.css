@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+}
+
+:root{
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --white: hsl(0, 0%, 100%);
+    --very-light-grayish-blue: hsl(210, 60%, 98%);
+    --light-grayish-blue-1: hsl(211, 68%, 94%);
+    --light-grayish-blue-2: hsl(205, 33%, 90%);
+    --grayish-blue: hsl(219, 14%, 63%);
+    --dark-grayish-blue: hsl(219, 12%, 42%);
+    --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-light-grayish-blue);
+    margin: 60px 0;
+}
+
+.notifications-box{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.notifications-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.notifications-top-left{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.notifications-title{
+    color: var(--very-dark-blue);
+    font-weight: 800;
+    width: fit-content;
+    font-size: 24px;
+}
+
+.notifications-amount{
+    font-size: 16px;
+    padding: 3px 12px;
+    background-color: var(--blue);
+    border-radius: 8px;
+    color: var(--white);
+    font-weight: 800;
+    text-align: center;
+}
+
+#mark-all-read{
+    color: var(--dark-grayish-blue);
+    font-size: 16px;
+    transition: all .3s;
+}
+
+#mark-all-read:hover{
+    cursor: pointer;
+    color: var(--blue);
+}
+
+
+.right-top{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.right-top-text{
+    color: var(--dark-grayish-blue);
+    margin-bottom: 5px;
+}
+
+.notification{
+    display: flex;
+    margin-bottom: 10px;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.notification-left{
+    width: 40px;
+}
+
+
+.notification-left > img{
+    width: 40px;
+}
+
+.person-text{
+    color: var(--very-dark-blue);
+    font-weight: 800;
+    transition: all .3s;
+}
+
+.person-text:hover{
+    cursor: pointer;
+    color: var(--blue);
+}
+
+.bold-text{
+    font-weight: bold;
+    transition: all .3s;
+}
+
+.bold-text:hover{
+    cursor: pointer;
+    color: var(--blue);
+}
+
+.red-dot{
+    width: 7px;
+    height: 7px;
+    background-color: var(--red);
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.right-bottom{
+    color: var(--grayish-blue);
+}
+
+.blue-bold-text{
+    color: var(--blue);
+    font-weight: 800;
+}
+
+.blue-bold-text:hover{
+    cursor: pointer;
+}
+
+.notification.unread{
+    background-color: var(--light-grayish-blue-1);
+}
+
+
+
+.notification-top{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.notification-bottom{
+    width: 92%;
+    margin-left: 14%;
+    padding: 20px;
+    border: 2px solid var(--light-grayish-blue-1);
+}
+
+.notification.with-private-msg{
+    display: flex;
+    align-items: flex-start;
+}
+
+.private-msg{
+    padding: 15px;
+    border: 2px solid var(--light-grayish-blue-2);
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: all .3s;
+}
+
+.private-msg:hover{
+    cursor: pointer;
+    background-color: var(--light-grayish-blue-2);
+}
+
+.notification-right.right-with-img{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.notification-right-right > img{
+    width: 40px;
+}
+
+.none{
+    display: none;
+}
+
+@media (max-width:375px) {
+    body{
+        margin: 0;
+    }
+    .notifications-box{
+        width: 100%;
+        padding: 20px 10px;
+    }
+    .notification{
+        padding: 15px;
+        gap: 7px;
+        padding-left: 10px;
+    }
+    img{
+        width: 30px;
+    }
+    .notification-right-left {
+        width: 220px;
+    }
+    .notification-right.right-with-img{
+        align-items: flex-start;
+    }
+}
+
